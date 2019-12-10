@@ -71,10 +71,11 @@ void inserir_dados_no_arquivo(){
 
 void ler_dados_do_arquivo(){
   Aluno aluno;
+  rewind(file);
   fscanf(file, "%s%s%s%d%lu", aluno.nome, aluno.endereco, aluno.cpf, &aluno.idade, &aluno.telefone);
-  printf("Nome: %s", aluno.nome);
-  printf("Endereço: %s", aluno.endereco);
-  printf("CPF: %s", aluno.cpf);
+  printf("Nome: %s\n", aluno.nome);
+  printf("Endereço: %s\n", aluno.endereco);
+  printf("CPF: %s\n", aluno.cpf);
   printf("Idade: %d\n", aluno.idade);
   printf("Telefone: %lu\n", aluno.telefone);
 }
